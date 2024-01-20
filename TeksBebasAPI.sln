@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeksBebasAPI", "TeksBebasAPI\TeksBebasAPI.csproj", "{6930875B-4186-4CFD-9248-7BC1739B872E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6930875B-4186-4CFD-9248-7BC1739B872E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6930875B-4186-4CFD-9248-7BC1739B872E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6930875B-4186-4CFD-9248-7BC1739B872E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6930875B-4186-4CFD-9248-7BC1739B872E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {546711AB-8021-4F93-8162-0FE90407F648}
+	EndGlobalSection
+EndGlobal

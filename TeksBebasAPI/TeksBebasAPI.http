@@ -1,0 +1,14 @@
+@TeksBebasAPI_HostAddress = https://localhost:44354
+
+GET {{TeksBebasAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{TeksBebasAPI_HostAddress}}/sentiment
+Accept: application/json
+
+{
+  "text": "sample"
+}
+###

@@ -1,0 +1,391 @@
+﻿{
+  "Scenario": "Classification",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "E:\\College\\Projects\\Final Thesis\\codes\\static\\datasets\\smsa\\train_preprocess.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "text",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "label",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.84505752495389863,
+        "RuntimeInSeconds": 12.199,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e6 * e7",
+          "e0": {
+            "InputColumnName": "text",
+            "OutputColumnName": "text"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "text"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "label",
+            "InputColumnName": "label",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "L1Regularization": 0.0949216858,
+            "L2Regularization": 0.08658051,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 0.8378839101029647,
+        "RuntimeInSeconds": 10.499,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5 * e7",
+          "e0": {
+            "InputColumnName": "text",
+            "OutputColumnName": "text"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "text"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "label",
+            "InputColumnName": "label",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e5": {
+            "L1Regularization": 0.0949216858,
+            "L2Regularization": 0.08658051,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.81018396017814787,
+        "RuntimeInSeconds": 65.818,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4 * e7",
+          "e0": {
+            "InputColumnName": "text",
+            "OutputColumnName": "text"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "text"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "label",
+            "InputColumnName": "label",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.99999977667298645,
+            "NumberOfTrees": 716,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 180,
+            "FeatureFraction": 0.99999999,
+            "L1Regularization": 1.7963374178312198E-09,
+            "L2Regularization": 0.41125378672038376,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.78492590252411787,
+        "RuntimeInSeconds": 199.593,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4 * e7",
+          "e0": {
+            "InputColumnName": "text",
+            "OutputColumnName": "text"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "text"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "label",
+            "InputColumnName": "label",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e4": {
+            "NumberOfLeaves": 816,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.99999977667298645,
+            "NumberOfTrees": 1444,
+            "SubsampleFraction": 0.026047818337521043,
+            "MaximumBinCountPerFeature": 411,
+            "FeatureFraction": 0.74042154753878753,
+            "L1Regularization": 6.6868687962717515E-09,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.7573831371842985,
+        "RuntimeInSeconds": 7.08,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e6 * e7",
+          "e0": {
+            "InputColumnName": "text",
+            "OutputColumnName": "text"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "text"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "OutputColumnName": "label",
+            "InputColumnName": "label",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "label",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "FeaturizeText",
+      "e1": "Concatenate",
+      "e2": "MapValueToKey",
+      "e3": "FastTreeOva",
+      "e4": "LightGbmMulti",
+      "e5": "LbfgsLogisticRegressionOva",
+      "e6": "LbfgsMaximumEntropyMulti",
+      "e7": "MapKeyToValue"
+    },
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6) * e7",
+    "MetricName": "MacroAccuracy",
+    "ModelFilePath": "E:\\source\\repos\\TeksBebasAPI\\TeksBebasAPI\\MLModel.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 1,
+    "Type": "ClassificationTrainingOption",
+    "TrainingTime": 900,
+    "OptimizeMetric": "MacroAccuracy",
+    "LabelColumn": "label",
+    "AvailableTrainers": [
+      "LBFGS",
+      "LGBM",
+      "FASTTREE"
+    ],
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "FileValidationOption",
+      "FilePath": "E:\\College\\Projects\\Final Thesis\\codes\\static\\datasets\\smsa\\valid_preprocess.csv"
+    }
+  }
+}
